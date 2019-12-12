@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hut8 Membership Signup</title>
+	<link rel="stylesheet" href="/CSS/member.css">
+	<!--
+		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	-->
+	<script src="/scripts/member.js"></script>
+</head>
+	
+<body>
+<main>
+	<h1>Hut8.dev Membership Form</h1>
+	<form action="register.html" method="get"
+		name="member_form" id="member_form">
+		
+		<fieldset>
+	    	<legend>Registration Information</legend>
+	    	<label for="email">Email Address:</label>
+			<input type="text" id="email" name="email" data-required-msg="Email Required">
+			<!--
+				HTML data-* Attribute
+				https://www.w3schools.com/tags/att_data-.asp#targetText=The%20data%2D*%20attribute%20gives,server%2Dside%20database%20queries).
+			-->
+	    	<span>*</span><br>
+	    	<label for="password">Password:</label>
+	    	<input type="password" id="password" name="password" data-required-msg="Password Required" placeholder="At least 6 characters" >
+	    	<span>*</span><br>
+	    	<label for="verify">Verify Password:</label>
+	    	<input type="password" id="verify" name="verify" data-required-msg="Verified Password Required" placeholder="Must match password above">
+	    	<span>*</span><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Member Information</legend>
+			<label>Membership type:</label>
+			<input type="radio" name="type" id="individual" value="individual" checked>Individual
+			<input type="radio" name="type" id="corporate" value="corporate" onclick="isCorporateChecked();">Corporate<br>
+			<label for="company_name">Company Name:</label>
+			<input type="text" id="company_name" name="company_name" disabled>
+			<span></span><br>
+			<label for="first_name">First Name:</label>
+			<input type="text" id="first_name" name="first_name" data-required-msg="First Name Required">
+			<span>*</span><br>
+			<label for="last_name">Last Name:</label>
+			<input type="text" id="last_name" name="last_name" data-required-msg="Last Name Required">
+			<span>*</span><br>
+
+			<label for="phone">Phone Number:</label>
+			<input type="text" id="phone" name="phone" data-required-msg="Phone Number Required" placeholder="999-999-9999">
+			<span>*</span><br>
+
+		</fieldset>
+
+		<fieldset id="buttons">
+			<legend>Submit Your Registration Information for Your Hut8 Membership</legend>
+			<label>&nbsp;</label>
+			<input type="submit" id="submit" name="submit" value="Submit">
+			<input type="reset" id="reset" name="reset" value="Reset" onClick="window.location.reload()"><br>
+		</fieldset>
+
+	</form>
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+// run tsc in the terminal
+
+{
+    "files": [
+        "typescripts/member.ts" // path to this documents ts file
+    ],
+    "compilerOptions": {
+        "removeComments": true,
+        "outDir": "scripts",
+        "target": "es5", // ECMAScript 5
+        "watch" : true
+    }
+}
+
